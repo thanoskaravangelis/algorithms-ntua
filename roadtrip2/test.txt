@@ -1,0 +1,3 @@
+#!/bin/bash
+
+for((i=1; i<25; i++)) do touch temp &echo Testing $i && ./aroadtrip $$2/input$i.txt > temp && diff temp $2/output$i.txt && rm temp; done;
